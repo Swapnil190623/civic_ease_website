@@ -7,33 +7,14 @@ import Header from './Components/Header'
 import ReportIssue from './Pages/ReportIssue'
 import DashboardAdmin from './Pages/DashboardAdmin'
 import DashboardCitizen from './Pages/DashboardCitizen'
+import AppRoutes from './routes/AppRoutes'
 
 
 
 function App() {
   const [count, setCount] = useState(0)
 
-  return (
-    <>
-     <HomePage/>
-     <Header/>
-     <br />
-     <br />
-     <ReportIssue/>
-
-     <br/>
-     <br/>
-     <br/>
-     <DashboardAdmin/>
-
-     <br />
-     <br />
-     <br />
-     <DashboardCitizen/>
-    
-     
-    </>
-  )
+  return <AppRoutes />
 }
 
 export default App

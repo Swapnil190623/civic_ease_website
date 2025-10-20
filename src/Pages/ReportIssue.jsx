@@ -16,18 +16,15 @@ const [currentPage, setCurrentPage] = useState('home');
     anonymous: false
   })
 
-
-
-
   return (
    
-    <div className="min-h-screen bg-gradient-to-br from-blue-50 via-white to-cyan-50">
+    <div className="min-h-screen bg-gradient-to-br from-orange-100 via-white to-cyan-50">
       {/* Navigation */}
       <nav className="bg-white/80 backdrop-blur-md border-b border-gray-200">
         <div className="max-w-7xl mx-auto px-6 py-4">
           <div className="flex items-center justify-between">
             <button onClick={() => setCurrentPage('home')} className="flex items-center space-x-3">
-              <div className="w-11 h-11 bg-gradient-to-br from-blue-600 to-blue-500 rounded-xl flex items-center justify-center shadow-lg">
+              <div className="w-11 h-11 bg-gradient-to-br from-orange-600 to-yellow-500 rounded-xl flex items-center justify-center shadow-lg">
                 <Zap className="w-6 h-6 text-white" />
               </div>
               <span className="text-2xl font-bold bg-gradient-to-r from-gray-900 to-gray-700 bg-clip-text text-transparent">CivicEase</span>
@@ -45,9 +42,9 @@ const [currentPage, setCurrentPage] = useState('home');
       <div className="max-w-4xl mx-auto px-6 py-12">
         {/* Header */}
         <div className="text-center mb-12">
-          <div className="inline-flex items-center space-x-2 px-4 py-2 bg-blue-100 rounded-full mb-6">
-            <Clock className="w-4 h-4 text-blue-600" />
-            <span className="text-sm font-semibold text-blue-700">Takes less than 2 minutes</span>
+          <div className="inline-flex items-center space-x-2 px-4 py-2 bg-orange-100 rounded-full mb-6">
+            <Clock className="w-4 h-4 text-orange-600" />
+            <span className="text-sm font-semibold text-orange-700">Takes less than 2 minutes</span>
           </div>
           <h1 className="text-5xl font-bold text-gray-900 mb-4">Report a Civic Issue</h1>
           <p className="text-xl text-gray-600 max-w-2xl mx-auto">
@@ -57,9 +54,9 @@ const [currentPage, setCurrentPage] = useState('home');
 
         {/* Form Card */}
         <div className="bg-white rounded-3xl shadow-2xl border border-gray-100 overflow-hidden">
-          <div className="bg-gradient-to-r from-blue-600 to-cyan-500 px-8 py-6">
+          <div className="bg-gradient-to-r from-orange-600 to-yellow-400 px-8 py-6">
             <h2 className="text-2xl font-bold text-white">Issue Details</h2>
-            <p className="text-blue-100 mt-1">Fill in the information below</p>
+            <p className="text-orange-100 mt-1">Fill in the information below</p>
           </div>
 
           <form className="p-8 space-y-6">
@@ -71,7 +68,7 @@ const [currentPage, setCurrentPage] = useState('home');
               <input
                 type="text"
                 placeholder="e.g., Broken street light on Main Road"
-                className="w-full px-5 py-4 border-2 border-gray-200 rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition text-gray-900 placeholder-gray-400"
+                className="w-full px-5 py-4 border-2 border-gray-200 rounded-xl focus:ring-2 focus:ring-orange-500 focus:border-orange-500 transition text-gray-900 placeholder-gray-400"
                 value={formData.title}
                 onChange={(e) => setFormData({...formData, title: e.target.value})}
               />
@@ -85,7 +82,7 @@ const [currentPage, setCurrentPage] = useState('home');
               <textarea
                 rows={5}
                 placeholder="Provide as much detail as possible about the issue, including when you noticed it and how it affects the community..."
-                className="w-full px-5 py-4 border-2 border-gray-200 rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition resize-none text-gray-900 placeholder-gray-400"
+                className="w-full px-5 py-4 border-2 border-gray-200 rounded-xl focus:ring-2 focus:ring-orange-500 focus:border-orange-500 transition resize-none text-gray-900 placeholder-gray-400"
                 value={formData.description}
                 onChange={(e) => setFormData({...formData, description: e.target.value})}
               />
@@ -99,7 +96,7 @@ const [currentPage, setCurrentPage] = useState('home');
                   Category <span className="text-red-500">*</span>
                 </label>
                 <select 
-                  className="w-full px-5 py-4 border-2 border-gray-200 rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition text-gray-900"
+                  className="w-full px-5 py-4 border-2 border-gray-200 rounded-xl focus:ring-2 focus:ring-orange-500 focus:border-orange-500 transition text-gray-900"
                   value={formData.category}
                   onChange={(e) => setFormData({...formData, category: e.target.value})}
                 >
@@ -119,7 +116,7 @@ const [currentPage, setCurrentPage] = useState('home');
                   Priority Level <span className="text-red-500">*</span>
                 </label>
                 <select 
-                  className="w-full px-5 py-4 border-2 border-gray-200 rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition text-gray-900"
+                  className="w-full px-5 py-4 border-2 border-gray-200 rounded-xl focus:ring-2 focus:ring-orange-500 focus:border-orange-500 transition text-gray-900"
                   value={formData.priority}
                   onChange={(e) => setFormData({...formData, priority: e.target.value})}
                 >
@@ -141,12 +138,12 @@ const [currentPage, setCurrentPage] = useState('home');
                 <input
                   type="text"
                   placeholder="Enter street address or landmark"
-                  className="w-full pl-12 pr-5 py-4 border-2 border-gray-200 rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition text-gray-900 placeholder-gray-400"
+                  className="w-full pl-12 pr-5 py-4 border-2 border-gray-200 rounded-xl focus:ring-2 focus:ring-orange-500 focus:border-orange-500 transition text-gray-900 placeholder-gray-400"
                   value={formData.location}
                   onChange={(e) => setFormData({...formData, location: e.target.value})}
                 />
               </div>
-              <button type="button" className="mt-3 text-sm text-blue-600 font-semibold hover:text-blue-700 flex items-center space-x-1">
+              <button type="button" className="mt-3 text-sm text-orange-600 font-semibold hover:text-orange-700 flex items-center space-x-1">
                 <MapPin className="w-4 h-4" />
                 <span>Use my current location</span>
               </button>
@@ -157,9 +154,9 @@ const [currentPage, setCurrentPage] = useState('home');
               <label className="block text-sm font-semibold text-gray-900 mb-3">
                 Upload Photo <span className="text-gray-500">(Optional but recommended)</span>
               </label>
-              <div className="border-2 border-dashed border-gray-300 rounded-2xl p-12 text-center hover:border-blue-500 hover:bg-blue-50/50 transition cursor-pointer group">
-                <div className="w-16 h-16 bg-blue-100 rounded-2xl flex items-center justify-center mx-auto mb-4 group-hover:bg-blue-200 transition">
-                  <Camera className="w-8 h-8 text-blue-600" />
+              <div className="border-2 border-dashed border-gray-300 rounded-2xl p-12 text-center hover:border-orange-500 hover:bg-orange-50/50 transition cursor-pointer group">
+                <div className="w-16 h-16 bg-orange-100 rounded-2xl flex items-center justify-center mx-auto mb-4 group-hover:bg-orange-200 transition">
+                  <Camera className="w-8 h-8 text-orange-600" />
                 </div>
                 <p className="text-gray-700 font-semibold mb-2">Click to upload or drag and drop</p>
                 <p className="text-sm text-gray-500">PNG, JPG, JPEG up to 10MB</p>
@@ -173,7 +170,7 @@ const [currentPage, setCurrentPage] = useState('home');
                 <input
                   type="checkbox"
                   id="anonymous"
-                  className="w-5 h-5 mt-0.5 text-blue-600 border-gray-300 rounded focus:ring-blue-500"
+                  className="w-5 h-5 mt-0.5 text-orange-600 border-gray-300 rounded focus:ring-orange-500"
                   checked={formData.anonymous}
                   onChange={(e) => setFormData({...formData, anonymous: e.target.checked})}
                 />
@@ -199,7 +196,7 @@ const [currentPage, setCurrentPage] = useState('home');
               </button>
               <button
                 type="submit"
-                className="flex-1 px-6 py-4 bg-gradient-to-r from-blue-600 to-blue-500 text-white font-semibold rounded-xl shadow-lg shadow-blue-500/30 hover:shadow-xl hover:shadow-blue-500/40 transition-all duration-300 flex items-center justify-center space-x-2"
+                className="flex-1 px-6 py-4 bg-gradient-to-r from-orange-600 to-orange-500 text-white font-semibold rounded-xl shadow-lg shadow-orange-500/30 hover:shadow-xl hover:shadow-orange-500/40 transition-all duration-300 flex items-center justify-center space-x-2"
               >
                 <Send className="w-5 h-5" />
                 <span>Submit Report</span>
@@ -207,8 +204,8 @@ const [currentPage, setCurrentPage] = useState('home');
             </div>
 
             {/* Help Text */}
-            <div className="bg-blue-50 rounded-xl p-4 border border-blue-200">
-              <p className="text-sm text-blue-900">
+            <div className="bg-orange-50 rounded-xl p-4 border border-orange-200">
+              <p className="text-sm text-orange-900">
                 <strong>💡 Pro Tip:</strong> Include clear photos and specific location details to help authorities resolve your issue faster. Average resolution time: 3.5 days.
               </p>
             </div>
@@ -223,7 +220,7 @@ const [currentPage, setCurrentPage] = useState('home');
             <p className="text-sm text-gray-600 mt-1">Proven track record</p>
           </div>
           <div className="bg-white rounded-xl p-6 shadow-sm">
-            <Shield className="w-8 h-8 text-blue-500 mx-auto mb-3" />
+            <Shield className="w-8 h-8 text-orange-500 mx-auto mb-3" />
             <p className="font-semibold text-gray-900">100% Secure</p>
             <p className="text-sm text-gray-600 mt-1">Your data is protected</p>
           </div>
