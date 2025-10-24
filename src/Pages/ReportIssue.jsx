@@ -18,16 +18,16 @@ const [currentPage, setCurrentPage] = useState('home');
 
   return (
    
-    <div className="min-h-screen bg-gradient-to-br from-orange-100 via-white to-cyan-50">
+    <div className="min-h-screen bg-linear-to-br from-orange-100 via-white to-cyan-50">
       {/* Navigation */}
       <nav className="bg-white/80 backdrop-blur-md border-b border-gray-200">
         <div className="max-w-7xl mx-auto px-6 py-4">
           <div className="flex items-center justify-between">
             <button onClick={() => setCurrentPage('home')} className="flex items-center space-x-3">
-              <div className="w-11 h-11 bg-gradient-to-br from-orange-600 to-yellow-500 rounded-xl flex items-center justify-center shadow-lg">
+              <div className="w-11 h-11 bg-linear-to-br from-orange-600 to-yellow-500 rounded-xl flex items-center justify-center shadow-lg">
                 <Zap className="w-6 h-6 text-white" />
               </div>
-              <span className="text-2xl font-bold bg-gradient-to-r from-gray-900 to-gray-700 bg-clip-text text-transparent">CivicEase</span>
+              <span className="text-2xl font-bold bg-linear-to-r from-gray-900 to-gray-700 bg-clip-text text-transparent">CivicEase</span>
             </button>
             <button 
               onClick={() => setCurrentPage('home')} 
@@ -54,7 +54,7 @@ const [currentPage, setCurrentPage] = useState('home');
 
         {/* Form Card */}
         <div className="bg-white rounded-3xl shadow-2xl border border-gray-100 overflow-hidden">
-          <div className="bg-gradient-to-r from-orange-600 to-yellow-400 px-8 py-6">
+          <div className="bg-linear-to-r from-orange-600 to-yellow-400 px-8 py-6">
             <h2 className="text-2xl font-bold text-white">Issue Details</h2>
             <p className="text-orange-100 mt-1">Fill in the information below</p>
           </div>
@@ -196,7 +196,7 @@ const [currentPage, setCurrentPage] = useState('home');
               </button>
               <button
                 type="submit"
-                className="flex-1 px-6 py-4 bg-gradient-to-r from-orange-600 to-orange-500 text-white font-semibold rounded-xl shadow-lg shadow-orange-500/30 hover:shadow-xl hover:shadow-orange-500/40 transition-all duration-300 flex items-center justify-center space-x-2"
+                className="flex-1 px-6 py-4 bg-linear-to-r from-orange-600 to-orange-500 text-white font-semibold rounded-xl shadow-lg shadow-orange-500/30 hover:shadow-xl hover:shadow-orange-500/40 transition-all duration-300 flex items-center justify-center space-x-2"
               >
                 <Send className="w-5 h-5" />
                 <span>Submit Report</span>

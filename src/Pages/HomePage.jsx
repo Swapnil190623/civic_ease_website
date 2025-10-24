@@ -28,15 +28,15 @@ function HomePage() {
 
           {/* Navigation */}
           <nav className="hidden md:flex space-x-6 text-sm font-medium text-gray-600">
-            <a href="#" className="hover:text-orange-600 transition">
+            <button className="text-orange-600 hover:text-orange-700 transition">
               About
-            </a>
-            <a href="#" className="hover:text-orange-600 transition">
+            </button>
+            <button className="text-orange-600 hover:text-orange-700 transition">
               Contact
-            </a>
-            <a href="#" className="hover:text-orange-600 transition">
+            </button>
+            <button className="text-orange-600 hover:text-orange-700 transition">
               FAQ
-            </a>
+            </button>
           </nav>
 
           {/* Buttons */}
@@ -109,10 +109,10 @@ function HomePage() {
       <footer className="bg-white py-8 border-t border-gray-200">
         <div className="max-w-7xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center text-sm text-gray-600">
           <div className="space-x-4 mb-4 md:mb-0">
-            <a href="#" className="hover:text-orange-600">
+            <a href="#" className="text-orange-600">
               Terms of Service
             </a>
-            <a href="#" className="hover:text-orange-600">
+            <a href="#" className="text-orange-600">
               Privacy Policy
             </a>
           </div>
