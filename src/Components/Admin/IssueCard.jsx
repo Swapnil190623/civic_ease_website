@@ -4,11 +4,11 @@ import { MapPin, TrendingUp, CheckCircle, Eye, Edit, Trash2 } from "lucide-react
 function getStatusColor(status) {
   switch (status) {
     case "pending":
-      return "bg-orange-50 text-orange-700 border-orange-300";
+      return "bg-emerald-50 text-emerald-700 border-emerald-300";
     case "in-progress":
-      return "bg-orange-100 text-orange-800 border-orange-400";
+      return "bg-emerald-100 text-emerald-800 border-emerald-400";
     case "resolved":
-      return "bg-green-100 text-green-700 border-green-400";
+      return "bg-teal-100 text-teal-700 border-teal-400";
     default:
       return "bg-gray-100 text-gray-700 border-gray-300";
   }
@@ -17,9 +17,9 @@ function getStatusColor(status) {
 function getPriorityColor(priority) {
   switch (priority?.toLowerCase()) {
     case "high":
-      return "bg-orange-200 text-orange-800 border-orange-400";
+      return "bg-emerald-200 text-emerald-800 border-emerald-400";
     case "medium":
-      return "bg-yellow-100 text-yellow-800 border-yellow-300";
+      return "bg-teal-100 text-teal-800 border-teal-300";
     case "low":
       return "bg-green-100 text-green-700 border-green-300";
     default:
@@ -46,7 +46,7 @@ function IssueCard({ issue, onView }) {
             <div className="flex items-start justify-between mb-3">
               <div className="flex-1">
                 <div className="flex items-center space-x-3 mb-2">
-                  <h3 className="text-lg font-bold text-gray-900 group-hover:text-orange-600 transition">
+                  <h3 className="text-lg font-bold text-gray-900 group-hover:text-emerald-600 transition">
                     {issue.title}
                   </h3>
                   <span className={`px-3 py-1 rounded-full text-xs font-bold border ${getPriorityColor(issue.priority)}`}>
@@ -67,8 +67,8 @@ function IssueCard({ issue, onView }) {
                   <span>Reported: {new Date(issue.created_at).toLocaleDateString()}</span>
                   <span>•</span>
                   <span className="flex items-center space-x-1">
-                    <TrendingUp className="w-4 h-4 text-orange-600" />
-                    <span className="font-semibold text-orange-600">
+                    <TrendingUp className="w-4 h-4 text-emerald-600" />
+                    <span className="font-semibold text-emerald-600">
                       {issue.issue_votes || 0} votes
                     </span>
                   </span>
@@ -89,7 +89,7 @@ function IssueCard({ issue, onView }) {
             <div className="flex items-center space-x-3 mt-4 pt-4 border-t border-gray-100">
               <button
                 onClick={() => onView(issue)}
-                className="px-5 py-2.5 bg-orange-600 text-white rounded-lg font-semibold hover:bg-orange-700 transition shadow-sm hover:shadow-md flex items-center space-x-2"
+                className="px-5 py-2.5 bg-emerald-600 text-white rounded-lg font-semibold hover:bg-emerald-700 transition shadow-sm hover:shadow-md flex items-center space-x-2"
               >
                 <Eye className="w-4 h-4" />
                 <span>View Details</span>

@@ -9,7 +9,7 @@ function Pagination({ currentPage, totalPages, onPageChange }) {
           onClick={() => onPageChange(i + 1)}
           className={`px-3 py-1 rounded-md ${
             currentPage === i + 1
-              ? "bg-orange-600 text-white"
+              ? "bg-emerald-600 text-white"
               : "bg-gray-100 hover:bg-gray-200"
           }`}
         >

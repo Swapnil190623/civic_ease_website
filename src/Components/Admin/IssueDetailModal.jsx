@@ -4,9 +4,9 @@ import { X, MapPin, TrendingUp, CheckCircle, MoreVertical } from "lucide-react";
 const getStatusColor = (status) => {
   switch (status) {
     case "pending":
-      return "bg-orange-50 text-orange-700 border-orange-300";
+      return "bg-emerald-50 text-emerald-700 border-emerald-300";
     case "in-progress":
-      return "bg-orange-100 text-orange-800 border-orange-400";
+      return "bg-emerald-100 text-emerald-800 border-emerald-400";
     case "resolved":
       return "bg-green-100 text-green-700 border-green-400";
     default:
@@ -17,9 +17,9 @@ const getStatusColor = (status) => {
 const getPriorityColor = (priority) => {
   switch (priority?.toLowerCase()) {
     case "high":
-      return "bg-orange-200 text-orange-800 border-orange-400";
+      return "bg-emerald-200 text-emerald-800 border-emerald-400";
     case "medium":
-      return "bg-yellow-100 text-yellow-800 border-yellow-300";
+      return "bg-teal-100 text-teal-800 border-teal-300";
     case "low":
       return "bg-green-100 text-green-700 border-green-300";
     default:
@@ -32,10 +32,10 @@ const IssueDetailModal = ({ issue, onClose, handleStatusChange }) => (
     <div className="bg-white rounded-3xl max-w-4xl w-full max-h-[90vh] overflow-y-auto shadow-2xl transition-all">
       
       {/* 🔶 Modal Header */}
-      <div className="sticky top-0 bg-linear-to-r from-orange-500 to-orange-600 px-8 py-6 flex items-center justify-between shadow-md">
+      <div className="sticky top-0 bg-linear-to-r from-emerald-500 to-teal-600 px-8 py-6 flex items-center justify-between shadow-md">
         <div>
           <h2 className="text-2xl font-bold text-white">Issue Details</h2>
-          <p className="text-orange-100 text-sm mt-1">ID: #{issue.id}</p>
+          <p className="text-emerald-100 text-sm mt-1">ID: #{issue.id}</p>
         </div>
         <button
           onClick={onClose}
@@ -45,7 +45,7 @@ const IssueDetailModal = ({ issue, onClose, handleStatusChange }) => (
         </button>
       </div>
 
-      {/* 🔶 Modal Body */}
+      {/* Modal Body */}
       <div className="p-8 space-y-6">
         
         {/* Status and Priority */}
@@ -59,7 +59,7 @@ const IssueDetailModal = ({ issue, onClose, handleStatusChange }) => (
         </div>
 
         {/* Image */}
-        <div className="rounded-2xl overflow-hidden shadow-lg border border-orange-100">
+        <div className="rounded-2xl overflow-hidden shadow-lg border border-emerald-100">
           <img
             src={issue.image}
             alt={issue.title}
@@ -85,7 +85,7 @@ const IssueDetailModal = ({ issue, onClose, handleStatusChange }) => (
             <div className="bg-gray-50 rounded-xl p-4 border border-gray-200">
               <p className="text-sm text-gray-600 mb-1">Location</p>
               <p className="font-semibold text-gray-900 flex items-center space-x-2">
-                <MapPin className="w-4 h-4 text-orange-600" />
+                <MapPin className="w-4 h-4 text-emerald-600" />
                 <span>{issue.location}</span>
               </p>
             </div>
@@ -106,7 +106,7 @@ const IssueDetailModal = ({ issue, onClose, handleStatusChange }) => (
             <div className="bg-gray-50 rounded-xl p-4 border border-gray-200">
               <p className="text-sm text-gray-600 mb-1">Community Votes</p>
               <p className="font-semibold text-gray-900 flex items-center space-x-2">
-                <TrendingUp className="w-4 h-4 text-orange-600" />
+                <TrendingUp className="w-4 h-4 text-emerald-600" />
                 <span>{issue.votes} citizens support this</span>
               </p>
             </div>
@@ -121,13 +121,13 @@ const IssueDetailModal = ({ issue, onClose, handleStatusChange }) => (
 
         {/* Resolution Notes */}
         {issue.status === "resolved" && issue.resolutionNotes && (
-          <div className="bg-orange-50 border border-orange-200 rounded-xl p-6">
-            <h4 className="font-semibold text-orange-900 mb-2 flex items-center space-x-2">
-              <CheckCircle className="w-5 h-5 text-orange-600" />
+          <div className="bg-emerald-50 border border-emerald-200 rounded-xl p-6">
+            <h4 className="font-semibold text-emerald-900 mb-2 flex items-center space-x-2">
+              <CheckCircle className="w-5 h-5 text-emerald-600" />
               <span>Resolution Notes</span>
             </h4>
-            <p className="text-orange-800">{issue.resolutionNotes}</p>
-            <p className="text-sm text-orange-700 mt-2">
+            <p className="text-emerald-800">{issue.resolutionNotes}</p>
+            <p className="text-sm text-emerald-700 mt-2">
               Resolved on: {issue.resolvedDate}
             </p>
           </div>
@@ -138,7 +138,7 @@ const IssueDetailModal = ({ issue, onClose, handleStatusChange }) => (
           {issue.status === "pending" && (
             <button
               onClick={() => handleStatusChange(issue.id, "in-progress")}
-              className="flex-1 px-6 py-3 bg-orange-600 text-white rounded-xl font-semibold hover:bg-orange-700 transition shadow-lg"
+              className="flex-1 px-6 py-3 bg-emerald-600 text-white rounded-xl font-semibold hover:bg-emerald-700 transition shadow-lg"
             >
               Start Working
             </button>

@@ -9,7 +9,7 @@ function Sidebar({ active, setActive }) {
   ];
 
   return (
-    <aside className="w-64 bg-orange-600 text-white min-h-screen p-6 shadow-lg fixed left-0 top-0">
+    <aside className="w-64 bg-emerald-600 text-white min-h-screen p-6 shadow-lg fixed left-0 top-0">
       <h2 className="text-2xl font-bold mb-8 text-center">CivicEase</h2>
       <nav className="space-y-4">
         {menuItems.map((item) => (
@@ -18,8 +18,8 @@ function Sidebar({ active, setActive }) {
             onClick={() => setActive(item.id)}
             className={`block w-full text-left px-4 py-2 rounded-lg transition-all ${
               active === item.id
-                ? "bg-orange-700"
-                : "hover:bg-orange-500 hover:translate-x-1"
+                ? "bg-emerald-700"
+                : "hover:bg-emerald-500 hover:translate-x-1"
             }`}
           >
             {item.name}
